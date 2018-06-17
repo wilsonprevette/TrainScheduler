@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="assets/js/logic.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -65,19 +67,19 @@
     <form id="submitForm">
         <div class="form-group">
             <label for="train">Train Name</label>
-            <input type="text" class="form-control" id="inputTrain" aria-describedby="emailHelp">
+            <input type="text" class="form-control" id="inputTrain">
         </div>
         <div class="form-group">
             <label for="destination">Destination</label>
             <input type="text" class="form-control" id="inputDest">
         </div>
         <div class="form-group">
-            <label for="trainTime">First Train Time (HH:MM)</label>
-            <input type="time" class="form-control" id="trainTime">
+            <label for="time">First Train Time (HH:MM)</label>
+            <input type="time" class="form-control" id="inputTime">
         </div>
         <div class="form-group">
-            <label for="frequency">Frequency (min)</label>
-            <input type="number" class="form-control" id="frequency">
+            <label for="min">Frequency (min)</label>
+            <input type="number" class="form-control" id="inputFreq">
         </div>
         <button type="submit" id="submit" class="btn btn-primary">Submit</button>
     </form>
