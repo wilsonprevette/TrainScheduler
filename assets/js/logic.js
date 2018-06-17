@@ -1,4 +1,3 @@
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 <script>
   // Initialize Firebase
   var config = {
@@ -9,7 +8,9 @@
     storageBucket: "",
     messagingSenderId: "522211035942"
   };
+
   firebase.initializeApp(config);
 
   var database = firebase.database();
+
 </script>

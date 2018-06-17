@@ -1,0 +1,11 @@
+#topText {
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+
+#submitForm {
+    border: gray;
+    border-width: 1px;
+    border-style: solid;
+}
