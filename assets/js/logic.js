@@ -10,17 +10,17 @@ var config = {
 
 firebase.initializeApp(config);
 
-var database = firebase.database();
+var database = firebase.database().ref();
 
 //set function to keep form from refreshing page
 $("submit").on("click", function (event) {
   event.preventDefault();
 
 //set variables for form inputs
-  let train = $("inputTrain").val()
-  let desti = $("inputDest").val()
-  let time = $("inputTime").val()
-  let freq = $("inputFreq").val()
+  let train = $("#inputTrain").val()
+  let desti = $("#inputDest").val()
+  let time = $("#inputTime").val()
+  let freq = $("#inputFreq").val()
 
 //set firebase push function to append data
   database.ref().push({
@@ -37,3 +37,11 @@ $("submit").on("click", function (event) {
 }
 
 //set a function to have table capture values after submission
+database.on("child_added", function(snapshot){
+  let newTrain = snapshot.val().Name;
+  let newDest = snapshot.val().Destination;
+  let newTime = snapshot.val().Time;
+  let Frequency = snapshot.val().Frequency;
+})
+
+//set function to display submitted elements on table
